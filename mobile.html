@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        /* ทำให้ไม่สามารถเลื่อนหน้าจอได้ */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #b2d8f7, #dab3ff);
+            display: flex;
+            justify-content: center;
+            /* จัดตรงกลางในแนวนอน */
+            align-items: center;
+            /* จัดตรงกลางในแนวตั้ง */
+            flex-direction: column;
+            /* จัดให้เนื้อหาอยู่ในแนวตั้ง */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            /* ขนาดปกติ */
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ */
+        .navbar a:hover {
+            transform: scale(1.2);
+            /* ขยายขนาด 1.2 เท่า */
+            font-size: 20px;
+            /* ปรับขนาดใหญ่ขึ้น */
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* แสดง 5 คอลัมน์ในแถวเดียว */
+            gap: 20px;
+            /* ช่องว่างระหว่างรูป */
+            width: 80%;
+            /* กำหนดความกว้างของกริด */
+            margin-top: 80px;
+            /* เพิ่มระยะห่างจากแถบเมนู */
+        }
+
+        .gallery img {
+            width: 100%;
+            /* ทำให้รูปเต็มคอลัมน์ */
+            height: auto;
+            /* ให้ความสูงเป็นอัตโนมัติ */
+            object-fit: cover;
+            /* ทำให้ภาพมีการครอบตัดที่เหมาะสม */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="resume.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="tran.html">Transcript</a>
+    </div>
+
+    <!-- Gallery สำหรับรูป 5 รูป -->
+    <div class="gallery">
+        <img src="photo/answer.png" alt="Image 1">
+        <img src="photo/onee.png" alt="Image 2">
+        <img src="photo/twoo.png" alt="Image 3">
+        <img src="photo/tree.png" alt="Image 4">
+        <img src="photo/fourr.png" alt="Image 5">
+    </div>
+
+</body>
+
+</html>

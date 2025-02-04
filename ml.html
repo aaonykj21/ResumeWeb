@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        /* ทำให้ไม่สามารถเลื่อนหน้าจอได้ */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #b2d8f7, #dab3ff);
+            display: flex;
+            justify-content: center;
+            /* จัดตรงกลางในแนวนอน */
+            align-items: center;
+            /* จัดตรงกลางในแนวตั้ง */
+            flex-direction: column;
+            /* จัดให้เนื้อหาอยู่ในแนวตั้ง */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            /* ขนาดปกติ */
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ */
+        .navbar a:hover {
+            transform: scale(1.2);
+            /* ขยายขนาด 1.2 เท่า */
+            font-size: 20px;
+            /* ปรับขนาดใหญ่ขึ้น */
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+            /* padding-left: -500px; */
+            /* ให้ตรงกับรูปภาพ */
+            padding-right: 850px;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 50%;
+            padding-right: 400px;
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 130px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .gallery-container2 {
+            display: flex;
+            justify-content: flex-start;
+            width: 50%;
+            padding-left: 600px;
+            margin-top: -550px;
+            margin-left: -200px;
+            padding-right: 200px;
+        }
+
+        .gallery2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery2 img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .gallery2 div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        figcaption {
+            margin-top: 5px;
+            /* เพิ่มระยะห่างจากรูป */
+            font-size: px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="resume.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="tran.html">Transcript</a>
+    </div>
+    <h1>Dataset</h1>
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="photo/pong.png" alt="Image 1">
+            <img src="photo/one.png" alt="Image 2">
+            <img src="photo/two.png" alt="Image 3">
+            <img src="photo/three.png" alt="Image 4">
+            <img src="photo/four.png" alt="Image 5">
+            <img src="photo/five.png" alt="Image 6">
+            <img src="photo/kum.png" alt="Image 7">
+            <img src="photo/ok.png" alt="Image 8">
+        </div>
+    </div>
+    <div class="gallery-container2">
+        <div class="gallery2">
+            <div>
+                <img src="photo/random.png" alt="Image 9">
+                <figcaption>Random Forest</figcaption>
+            </div>
+            <div>
+                <img src="photo/dicision.png" alt="Image 10">
+                <figcaption>Dicision Tree</figcaption>
+            </div>
+            <div>
+                <img src="photo/support.png" alt="Image 9">
+                <figcaption>Support Vector Machine</figcaption>
+            </div>
+            <div>
+                <img src="photo/mlp.png" alt="Image 9">
+                <figcaption>Multi-layer Perceptron</figcaption>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

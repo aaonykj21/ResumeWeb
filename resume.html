@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /* ทำให้ไม่สามารถเลื่อนหน้าจอได้ */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #b2d8f7, #dab3ff);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            /* ขนาดปกติ */
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ */
+        .navbar a:hover {
+            transform: scale(1.2);
+            /* ขยายขนาด 1.2 เท่า */
+            font-size: 20px;
+            /* ปรับขนาดใหญ่ขึ้น */
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 100px;
+            flex-wrap: wrap;
+            /* ทำให้เนื้อหาลงบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        .profile h2 {
+            margin: 10px 0 5px;
+        }
+
+        .profile p {
+            font-size: 18px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        .content div {
+            width: 45%;
+        }
+
+        .content div:first-child {
+            margin-left: 100px;
+            /* ปรับค่าตามต้องการ */
+        }
+
+        h3 {
+            border-bottom: 2px solid black;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            /* เปลี่ยนจาก none เป็น disc */
+            padding-left: 20px;
+            /* เพิ่มระยะห่างจากขอบซ้าย */
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="project.html">Project</a>
+        <a href="tran.html">Transcript</a>
+    </div>
+    <div class="container">
+        <div class="profile">
+            <img src="photo/Aonny.jpg" alt="Profile Picture">
+            <h2>ณัฐฌา อย่าเคลิ้มจิตร์</h2>
+            <p>650710542 (CS)</p>
+        </div>
+        <div class="content">
+            <div>
+                <h3>Skill</h3>
+                <p><b><i>Programming Language</i></b></p>
+                <ul>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Golang</li>
+                    <li>HTML, CSS</li>
+                </ul>
+                <p><b><i>Database</i></b></p>
+                <ul>
+                    <li>MySQL</li>
+                </ul>
+                <p><b><i>Tools</i></b></p>
+                <ul>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Education</h3>
+                <p><b><i>Silpakorn University</i></b></p>
+                <p>Nakhonpathom, Thailand</p>
+                <ul>
+                    <li>Computer Science</li>
+                    <li>GPA 3.23 (5 semesters)</li>
+                </ul>
+
+                <p><b><i>Nawaminthrachinuthit Satriwitthaya Phutthamonthon School</i></b></p>
+                <p>Bangkok, Thailand</p>
+                <ul>
+                    <li>GPA 3.77</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

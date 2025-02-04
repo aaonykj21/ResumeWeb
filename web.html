@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        /* ทำให้ไม่สามารถเลื่อนหน้าจอได้ */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #b2d8f7, #dab3ff);
+            display: flex;
+            justify-content: center;
+            /* จัดตรงกลางในแนวนอน */
+            align-items: center;
+            /* จัดตรงกลางในแนวตั้ง */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            /* ขนาดปกติ */
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ */
+        .navbar a:hover {
+            transform: scale(1.2);
+            /* ขยายขนาด 1.2 เท่า */
+            font-size: 20px;
+            /* ปรับขนาดใหญ่ขึ้น */
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* กำหนด 4 คอลัมน์ */
+            gap: 20px;
+            /* ช่องว่างระหว่างรูป */
+            width: 90%;
+            /* กำหนดความกว้างของกริด */
+        }
+
+        .gallery img {
+            width: 100%;
+            /* ทำให้รูปเต็มคอลัมน์ */
+            height: 200px;
+            /* ความสูงของรูป */
+            object-fit: contain;
+            /* คงสัดส่วนของรูป */
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+                /* เปลี่ยนเป็น 3 คอลัมน์เมื่อขนาดหน้าจอเล็กลง */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                /* เปลี่ยนเป็น 2 คอลัมน์ */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+                /* เปลี่ยนเป็น 1 คอลัมน์สำหรับหน้าจอเล็ก */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="resume.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="tran.html">Transcript</a>
+    </div>
+    <div class="gallery">
+        <img src="photo/bread.png" alt="Image 1">
+        <img src="photo/meat.png" alt="Image 2">
+        <img src="photo/veg.png" alt="Image 3">
+        <img src="photo/sauce.png" alt="Image 4">
+        <img src="photo/topping.png" alt="Image 5">
+        <img src="photo/sum.png" alt="Image 6">
+        <img src="photo/order.png" alt="Image 7">
+        <img src="photo/payment.png" alt="Image 8">
+    </div>
+</body>
+
+</html>

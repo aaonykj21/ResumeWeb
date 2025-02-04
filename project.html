@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        /* ทำให้ไม่สามารถเลื่อนหน้าจอได้ */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #b2d8f7, #dab3ff);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            /* ขนาดปกติ */
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        /* เมื่อเอาเมาส์ไปชี้ */
+        .navbar a:hover {
+            transform: scale(1.2);
+            /* ขยายขนาด 1.2 เท่า */
+            font-size: 20px;
+            /* ปรับขนาดใหญ่ขึ้น */
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50%;
+            box-sizing: border-box;
+            margin-top: 170px;
+            margin-bottom: auto;
+        }
+
+        .container div {
+            width: 80%;
+            height: 30%;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .container div:hover {
+            transform: scale(1.05);
+            background-color: #e3e3e3;
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ทำให้ <a> ครอบคลุมทั้งพื้นที่ */
+        .container a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+            /* ให้ครอบคลุมพื้นที่ทั้ง div */
+            height: 100%;
+            /* ให้ครอบคลุมพื้นที่ทั้ง div */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="resume.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="tran.html">Transcript</a>
+    </div>
+
+    <div class="container">
+        <div>
+            <a href="ml.html">Machine Learning</a>
+        </div>
+        <div>
+            <a href="web.html">Web</a>
+        </div>
+        <div>
+            <a href="mobile.html">Mobile</a>
+        </div>
+    </div>
+</body>
+
+</html>
